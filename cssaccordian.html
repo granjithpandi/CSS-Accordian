@@ -1,0 +1,90 @@
+<!--
+  Author Details
+  ==============
+  Author: Ranjith Pandi
+
+  Author URL: http://ranjithpandi.com
+
+  Attribution is must on every page, where this work is used.
+
+  For Attribution removal request. please consider contacting us through http://ranjithpandi.com/#contact
+-->
+
+<!DOCTYPE html>
+<html>
+<head> 
+<title>CSS Accordion</title>
+<style>
+.options {
+  width: 300px;
+  clear: both;
+}
+
+input {
+  position: absolute;
+  top: -1000px;
+  left: -1000px;
+}
+
+label {
+  height: 50px;
+  width: 300px;
+  background: #e5e5e5;
+  line-height: 50px;
+  text-align: center;
+  float: left;
+  cursor: pointer;
+  border-bottom: 1px solid #FFFFFF;
+
+  -webkit-transition: height 1s ease;
+  -moz-transition: height 1s ease;
+  -o-transition: height 1s ease;
+  -ms-transition: height 1s ease;
+  transition: height 1s ease;
+}
+
+.slider {
+  color: #000;
+  height: 0px;
+  width: 298px;
+  overflow: hidden;
+  border: 1px solid #e5e5e5;
+  border-top: 0px;
+  background: #FFFFFF;
+
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+input[type="radio"]:checked+label ~ .slider {
+  height: 300px;
+}
+</style>
+</head>
+<body>
+<div class="options">
+  <input id="radio1" checked type="radio" name="radio">
+  <label for="radio1">Slide 1</label>
+  <div class="slider">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing.
+  </div>
+</div>
+<div class="options">
+  <input id="radio2" type="radio" name="radio">
+  <label for="radio2">Slide 2</label>
+  <div class="slider">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing.
+  </div>
+</div>
+<div class="options">
+  <input id="radio3" type="radio" name="radio">
+  <label for="radio3">Slide 3</label>
+  <div class="slider">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing.
+  </div>
+</div>
+</body>
+</html>
